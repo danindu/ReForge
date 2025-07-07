@@ -21,6 +21,26 @@ At its core, ReForge pushes every crash- or hang-inducing input through an AI "f
 
 Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the local model, or even the decision logic in MCP without touching the fuzzing harness. The result is a repeatable cycle that discovers, weaponises, and explains software weaknesses with minimal human intervention.
 
+## Workflow
+
+<p align="center">
+  <img src="images/flowchart.png" alt="Flowchart" width="70%">
+</p>
+
+
+1. **AFL++** finds interesting inputs (crashes, hangs, anomalous paths).
+
+2. **MCP** streams each artefact—plus binary metadata—into **AI-1**.
+
+3. **AI-1** returns a candidate exploit. MCP executes it against the un-instrumented binary.
+
+4. If the exploit misfires, MCP feeds the error context back to **AI-1** until it passes or loop termination triggers, whichever comes first.
+
+5. A validated exploit and its provenance are handed to **-2**, which writes a beginner-friendly analysis report.
+
+6. Everything (exploit, explanation, report, validation log) lands in `/results`.
+
+
 ### Key Features
 
 1. **Fully Autonomous Pipeline**: - From fuzzing to exploit generation to human-readable reporting — all triggered via a single script, minimal manual intervention required.
@@ -170,26 +190,6 @@ ReForge/
 ├── requirements.txt            
 └── .env                        
 ```
-
-## Workflow
-
-<p align="center">
-  <img src="images/flowchart.png" alt="Flowchart" width="70%">
-</p>
-
-
-1. **AFL++** finds interesting inputs (crashes, hangs, anomalous paths).
-
-2. **MCP** streams each artefact—plus binary metadata—into **AI-1**.
-
-3. **AI-1** returns a candidate exploit. MCP executes it against the un-instrumented binary.
-
-4. If the exploit misfires, MCP feeds the error context back to **AI-1** until it passes or loop termination triggers, whichever comes first.
-
-5. A validated exploit and its provenance are handed to **-2**, which writes a beginner-friendly analysis report.
-
-6. Everything (exploit, explanation, report, validation log) lands in `/results`.
-
 
 ## Output Analysis
 
