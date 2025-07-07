@@ -77,46 +77,11 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 - GCC/Clang compiler toolchain
 - Python development headers
 
+*above required tools will be installed under docker deployment.*
 
 
-## Installation
-*We highly recommend the users to follow docker deployment.*
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/danindu/reforge.git
-cd reforge
-```
-
-### 2. Install AFL++
-```bash
-chmod +x setup/install_afl.sh
-sudo ./setup/install_afl.sh
-```
-
-### 3. Install Python Dependencies
-```bash
-pip3 install -r requirements.txt
-```
-
-### 4. Configure API Keys
-Create a `.env` file in the project root:
-```bash
-# Required API Keys (for PoC demonstration)
-API_KEY=your_api_key_here
-```
-
-### 5. Usage
-```bash
-# Make the main script executable
-chmod +x run_reforge.sh
-
-# Run the complete automation pipeline
-./run_reforge.sh
-```
-
-
-## Docker Deployment (Recommended)
+## Docker Deployment
 
 The easiest way to get started is using our pre-configured Docker container:
 
@@ -169,7 +134,7 @@ echo "another sample" > corpus/seeds/seed2.txt
 ```
 
 
-##  Project Structure (changes here)
+##  Project Structure
 
 ```
 ReForge/
