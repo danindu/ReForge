@@ -1,0 +1,4 @@
+# Ignore all log and temp files
+*.pem
+id_rsa
+.env
