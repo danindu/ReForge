@@ -145,7 +145,7 @@ chmod +x run_reforge.sh
 1. **Instrumented Binary**: Compiled with AFL++ instrumentation
 ```bash
 # Example compilation
-afl-gcc -o target_instrumented target.c
+afl-clang-fast++ -o target_instrumented target.c
 ```
 
 2. **Uninstrumented Binary**: Standard compilation for exploit testing
