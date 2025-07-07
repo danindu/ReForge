@@ -122,6 +122,11 @@ chmod +x run_reforge.sh
 The easiest way to get started is using our pre-configured Docker container:
 
 ```bash
+
+#Clone the repository
+git clone https://github.com/danindu/reforge.git
+cd reforge
+
 # Build the Docker image
 docker build -t reforge .
 
