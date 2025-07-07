@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Python-blue.svg" alt="Language">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/Platform-Linux-lightgrey.svg" alt="Platform">
   <img src="https://img.shields.io/badge/AFL%2B%2B-Integrated-red.svg" alt="AFL++">
   <img src="https://img.shields.io/badge/AI-Powered-purple.svg" alt="AI">
