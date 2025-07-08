@@ -40,11 +40,6 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 6. Everything (exploit, explanation, report, validation log) lands in `/results`.
 
 
-## Demo
-
-[demo video]
-
-
 ### Key Features
 
 1. **Fully Autonomous Pipeline**: - From fuzzing to exploit generation to human-readable reporting — all triggered via a single script, minimal manual intervention required.
@@ -67,6 +62,11 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 7. **Clean Output for Further Automation**  
     All artefacts — validated exploits, original crashes, logs, and AI reports — are saved in a predictable folder structure suitable for CI/CD pipelines or security audits.
    
+
+
+## Demo
+
+[demo video]
 
 
 ## Prerequisites
