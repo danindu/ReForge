@@ -29,15 +29,15 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 
 1. **AFL++** finds interesting inputs (crashes, hangs, anomalous paths).
 
-2. **MCP** streams each artefact—plus binary metadata—into **AI-1**.
+2. **MCP** streams each artifact—plus binary metadata—into **AI-1**.
 
 3. **AI-1** returns a candidate exploit. MCP executes it against the un-instrumented binary.
 
-4. If the exploit misfires, MCP feeds the error context back to **AI-1** until it passes or loop termination triggers, whichever comes first.
+4. If the exploit fails to execute, MCP feeds the error context back to **AI-1** until it passes or loop termination conditions, whichever comes first.
 
-5. A validated exploit and its provenance are handed to **-2**, which writes a beginner-friendly analysis report.
+5. A validated exploit and its provenance are handed to **AI-2**, which writes a beginner-friendly analysis report.
 
-6. Everything (exploit, explanation, report, validation log) lands in `/results`.
+6. All the files (exploit, explanation, report, validation log) will include in `/results`.
 
 
 ### Key Features
@@ -45,7 +45,7 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 1. **Fully Autonomous Pipeline**: - From fuzzing to exploit generation to human-readable reporting — all triggered via a single script, minimal manual intervention required.
 
 2. **Exploit Generation via LLMs**  
-    ReForge integrates directly with cloud-based LLMs to convert crash artefacts into working Python exploits. It does this intelligently, validating and refining output until execution succeeds.
+    ReForge integrates directly with cloud-based LLMs to convert crash artifacts into working Python exploits. It does this intelligently, validating and refining output until execution succeeds.
 
 3. **On-Device Vulnerability Analysis**  
     A local custom-model translates technical exploits into plain-English explanations, ideal for reporting, documentation, or onboarding junior analysts.
@@ -60,13 +60,13 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
     Every AI-generated exploit is executed and tested against the original binary. If it fails, contextual output is looped back to the generator to improve the payload via *Model Context Protocol (MCP)*.
 
 7. **Clean Output for Further Automation**  
-    All artefacts — validated exploits, original crashes, logs, and AI reports — are saved in a predictable folder structure suitable for CI/CD pipelines or security audits.
+    All artifacts — validated exploits, original crashes, logs, and AI reports — are saved in a predictable folder structure suitable for CI/CD pipelines or security audits.
    
 
 
 ## Demo
 
-[demo video]
+[Demo video coming soon]
 
 
 ## Prerequisites
@@ -82,7 +82,7 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 - GCC/Clang compiler toolchain
 - Python development headers
 
-*above required tools will be installed under docker deployment.*
+*The above tools will be automatically installed during Docker deployment.*
 
 
 
@@ -102,7 +102,7 @@ docker build -t reforge .
 # Run the container interactively
 docker run -it reforge
 
-# Inside the container, set up your API keys (for PoC)
+# Inside the container, set up your API keys (for Proof of Concept (PoC))
 echo "AI_API_KEY=your_key_here" > .env
 
 # Make the main script executable
@@ -167,19 +167,19 @@ ReForge/
 
 ## Output Analysis
 
-| Artefact                   | Path                                    | What You Get                                                                                                    |
+| Artifact                   | Path                                    | What You Get                                                                                                    |
 | -------------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Validated exploits**     | `results/exploits/`                     | Self-contned Python PoCs ready for red-team use or bug-bounty submission.                                     |
+| **Validated exploits**     | `results/exploits/`                     | Self-contained Python Proof of Concept (PoC)s ready for red-team use or bug-bounty submission.                                     |
 | **Raw inputs**             | `results/crashes/`  /  `results/hangs/` | Original AFL++ files that triggered abnormal behaviour—kept for triage or alt-analysis.                         |
 | **Validator logs**         | `results/validation/`                   | Exact console output, return codes, and timing data for every exploit attempt—perfect for CI regression checks. |
-| **Human-readable reports** | `results/reports/`                      | Markdown files from **-2** that cover vulnerability mechanism, exploit path, impact, and defensive guidance.  |
-ReForge’s directory layout makes it trivial to feed artefacts into downstream pipelines—static analysis, SBOM attestation, or continuous red-team testing—without additional parsing.
+| **Human-readable reports** | `results/reports/`                      | Markdown files from **AI-2** that cover vulnerability mechanism, exploit path, impact, and defensive guidance.  |
+ReForge’s directory layout makes it trivial to feed artifacts into downstream pipelines—static analysis, SBOM attestation, or continuous red-team testing—without additional parsing.
 
 ## Contributing
 
 Contributions are always welcome!
 
-We welcome contributions from the community. Here's a detled guide on how to get involved:
+We welcome contributions from the community. Here's a detailed guide on how to get involved:
 
 ### Fork the Repository
 
@@ -195,13 +195,13 @@ git checkout -b feature/your-feature-name
 ### Commit Your Changes
 
 ```bash
-git commit -m "Add detled feature description"
+git commit -m "Add detailed feature description"
 ```
 
 ### Push the Branch
 
 ```bash
-git request-pull mn origin/my-feature-branch
+git request-pull main origin/my-feature-branch
 ```
 
 ## Acknowledgments
