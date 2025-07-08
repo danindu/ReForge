@@ -40,6 +40,11 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 6. Everything (exploit, explanation, report, validation log) lands in `/results`.
 
 
+## Demo
+
+[demo video]
+
+
 ### Key Features
 
 1. **Fully Autonomous Pipeline**: - From fuzzing to exploit generation to human-readable reporting — all triggered via a single script, minimal manual intervention required.
@@ -207,4 +212,4 @@ We sincerely thank all open-source developers and contributors for their invalua
 - Danindu Gammanpilage ([@Danindu](https://github.com/danindu))
 - Sohan Simhar Prabakar ([@Sohan245](https://github.com/Sohan245/))
 - Samarth Bhat
-- Abhinav
+- Abhinav Harsha ([@Abinav28](https://github.com/Abinav28))
