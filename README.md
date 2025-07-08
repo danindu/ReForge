@@ -1,11 +1,12 @@
 # ReForge
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-Python-blue.svg" alt="Language">
+  <img src="https://img.shields.io/badge/Language-Python%20%7C%20Bash-blue.svg" alt="Languages">
   <img src="https://img.shields.io/badge/Platform-Linux-lightgrey.svg" alt="Platform">
   <img src="https://img.shields.io/badge/AFL%2B%2B-Integrated-red.svg" alt="AFL++">
   <img src="https://img.shields.io/badge/AI-Powered-purple.svg" alt="AI">
 </p>
+
 
 ## Overview
 
