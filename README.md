@@ -67,7 +67,7 @@ Because ReForge's pipeline is model-agnostic, you can swap the cloud model, the 
 
 ## Demo
 
-[Demo video coming soon]
+[![DEMO VIDEO](https://img.youtube.com/vi/Je8eE3ZiBZw/0.jpg)](https://www.youtube.com/watch?v=Je8eE3ZiBZw)
 
 
 ## Prerequisites
