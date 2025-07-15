@@ -210,7 +210,7 @@ git request-pull main origin/my-feature-branch
 We sincerely thank all open-source developers and contributors for their invaluable contributions.
 
 ## Authors
-- Danindu Gammanpilage ([@Danindu](https://github.com/danindu))
 - Sohan Simhar Prabakar ([@Sohan245](https://github.com/Sohan245/))
+- Danindu Gammanpilage ([@Danindu](https://github.com/danindu))
 - Samarth Bhat
 - Abhinav Harsha ([@Abinav28](https://github.com/Abinav28))
