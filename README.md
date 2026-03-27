@@ -212,5 +212,5 @@ We sincerely thank all open-source developers and contributors for their invalua
 ## Authors
 - Sohan Simhar Prabakar ([@Sohan245](https://github.com/Sohan245/))
 - Danindu Gammanpilage ([@Danindu](https://github.com/danindu))
-- Samarth Bhat
+- Samarth Bhat.
 - Abhinav Harsha ([@Abinav28](https://github.com/Abinav28))
